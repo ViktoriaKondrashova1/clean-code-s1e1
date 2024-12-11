@@ -6,24 +6,24 @@
   font-family: Lato, sans-serif;
 }
 
-.preview {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
 
-.preview__img {
+.header__img {
   width: 100%;
 }
 
-.preview__link {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
 
-  .preview { 
+  .header { 
     text-align: center;
   }
 
@@ -51,8 +51,7 @@ ul {
   padding: 0px;
 }
 
-li, 
-h3 {
+li {
   list-style: none;
 }
 
@@ -77,8 +76,7 @@ button{
 
 /* Heading */
 
-.title,
-.add-section__task-label {
+.title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -107,7 +105,7 @@ button{
 
 /* New Task */
 
-.add-section__task-label{
+.add-section__title {
   display: block;
   margin: 0 0 20px;
 }
