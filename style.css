@@ -110,7 +110,7 @@ button{
   margin: 0 0 20px;
 }
 
-.wrapper__task-input {
+.add-section__input {
   width: 318px;
 }
 
@@ -123,9 +123,6 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.list__item > * {
   vertical-align: middle;
 }
 
@@ -167,11 +164,11 @@ button{
   display: none;
 }
 
-.edit-mode .task-input {
+.list__item_edit-mode .task-input {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode .task-label {
+.list__item_edit-mode .task-label {
   display: none;
 }
