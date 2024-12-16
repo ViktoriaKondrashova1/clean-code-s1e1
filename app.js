@@ -42,7 +42,7 @@ var createNewTaskElement = function (taskString) {
   //Each elements, needs appending
   checkBox.type = "checkbox";
   editInput.type = "text";
-  editInput.className = "task-input";
+  editInput.className = "task-input item__input";
 
   editButton.innerText = "Edit"; //innerText encodes special characters, HTML does not.
   editButton.classList.add("button_edit");
@@ -91,9 +91,13 @@ var editTask = function () {
     //label becomes the inputs value.
     label.innerText = editInput.value;
     editBtn.innerText = "Edit";
+    editInput.classList.remove('item__input_edit-mode');
+    label.classList.remove('item__label_edit-mode');
   } else {
     editInput.value = label.innerText;
     editBtn.innerText = "Save";
+    editInput.classList.add('item__input_edit-mode');
+    label.classList.add('item__label_edit-mode');
   }
 
   //toggle .editmode on the parent.
@@ -117,6 +121,8 @@ var taskCompleted = function () {
   //Append the task list item to the #completed-tasks
   var listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
+  var label = listItem.querySelector(".task-label");
+  label.classList.add('completed-section__label');
   bindTaskEvents(listItem, taskIncomplete);
 };
 
